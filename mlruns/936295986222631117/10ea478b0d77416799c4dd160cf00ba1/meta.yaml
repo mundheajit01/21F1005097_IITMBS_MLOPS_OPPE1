@@ -1,0 +1,14 @@
+artifact_uri: file:///home/mundhearun01_gmail_com/21F1005097_IITMBS_MLOPS_OPPE1/mlruns/936295986222631117/10ea478b0d77416799c4dd160cf00ba1/artifacts
+end_time: 1762695985687
+entry_point_name: ''
+experiment_id: '936295986222631117'
+lifecycle_stage: active
+run_id: 10ea478b0d77416799c4dd160cf00ba1
+run_name: magnificent-mole-572
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762695598094
+status: 3
+tags: []
+user_id: mundhearun01_gmail_com

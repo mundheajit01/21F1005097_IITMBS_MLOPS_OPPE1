@@ -1,0 +1,10 @@
+artifact_location: file:///home/mundhearun01_gmail_com/21F1005097_IITMBS_MLOPS_OPPE1/mlruns/936295986222631117/models/m-073651fb92cf495eb4f86f7d6d46f5dd/artifacts
+creation_timestamp: 1762695973903
+experiment_id: '936295986222631117'
+last_updated_timestamp: 1762695985645
+model_id: m-073651fb92cf495eb4f86f7d6d46f5dd
+model_type: null
+name: model
+source_run_id: 10ea478b0d77416799c4dd160cf00ba1
+status: 2
+status_message: null

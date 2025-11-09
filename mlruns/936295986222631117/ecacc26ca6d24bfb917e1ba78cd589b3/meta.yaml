@@ -1,0 +1,14 @@
+artifact_uri: file:///home/mundhearun01_gmail_com/21F1005097_IITMBS_MLOPS_OPPE1/mlruns/936295986222631117/ecacc26ca6d24bfb917e1ba78cd589b3/artifacts
+end_time: 1762695573043
+entry_point_name: ''
+experiment_id: '936295986222631117'
+lifecycle_stage: active
+run_id: ecacc26ca6d24bfb917e1ba78cd589b3
+run_name: blushing-smelt-783
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762695311891
+status: 4
+tags: []
+user_id: mundhearun01_gmail_com

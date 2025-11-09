@@ -1,0 +1,47 @@
+name: Run ML Pipeline
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Needed for DVC
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Pull DVC data
+        run: dvc pull data/raw -r gcs # Use -r gcs if you set it up
+
+      - name: Process data
+        run: python src/process.py
+
+      - name: Run feature tests
+        run: pytest tests/
+
+      - name: Setup Feast
+        run: |
+          cd feature_repo
+          feast apply
+          feast materialize-incremental 2022-01-01T00:00:00
+          cd ..
+
+      - name: Train model
+        run: python src/train.py
+
+      - name: Create CML report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "## Model Metrics" > report.md
+          cat metrics.txt >> report.md
+          cml-send-comment report.md
